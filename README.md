@@ -2,9 +2,11 @@
 
 In the project directory, you can run:
 Install libraries and dependency
+
 ```npm i```
 
 Start the project
+
 ```npm start```
 
 Runs the app in the development mode.
