@@ -46,8 +46,8 @@ export default function BasicTable() {
                 <TableHead>
                     <TableRow>
                         <TableCell />
-                        {rows.map((row) => (
-                            <TableCell align="center">
+                        {rows.map((row, i) => (
+                            <TableCell align="center" key={i}>
                                 <Typography variant="h5" gutterBottom component="span">
                                     {row.label}
                                 </Typography>
@@ -62,8 +62,8 @@ export default function BasicTable() {
                                 General
                             </Typography>
                         </TableCell>
-                        {rows.map((row) => (
-                            <TableCell align="center">{row.general ? <CheckIcon /> : <CloseIcon />}</TableCell>
+                        {rows.map((row, i) => (
+                            <TableCell key={i} align="center">{row.general ? <CheckIcon /> : <CloseIcon />}</TableCell>
                         ))}
                     </TableRow>
                     <TableRow>
@@ -72,8 +72,8 @@ export default function BasicTable() {
                                 Specialist
                             </Typography>
                         </TableCell>
-                        {rows.map((row) => (
-                            <TableCell align="center">{row.specialist ? <CheckIcon /> : <CloseIcon />}</TableCell>
+                        {rows.map((row, i) => (
+                            <TableCell key={i} align="center">{row.specialist ? <CheckIcon /> : <CloseIcon />}</TableCell>
                         ))}
                     </TableRow>
                     <TableRow>
@@ -82,8 +82,8 @@ export default function BasicTable() {
                                 Physiotherapy
                             </Typography>
                         </TableCell>
-                        {rows.map((row) => (
-                            <TableCell align="center">{row.physiotherapy ? <CheckIcon /> : <CloseIcon />}</TableCell>
+                        {rows.map((row, i) => (
+                            <TableCell key={i} align="center">{row.physiotherapy ? <CheckIcon /> : <CloseIcon />}</TableCell>
                         ))}
                     </TableRow>
                     <TableRow>
@@ -92,8 +92,8 @@ export default function BasicTable() {
                                 Psychotherapy
                             </Typography>
                         </TableCell>
-                        {rows.map((row) => (
-                            <TableCell align="center">{row.psychotherapy ? <CheckIcon /> : <CloseIcon />}</TableCell>
+                        {rows.map((row, i) => (
+                            <TableCell key={i} align="center">{row.psychotherapy ? <CheckIcon /> : <CloseIcon />}</TableCell>
                         ))}
                     </TableRow>
                     <TableRow>
@@ -102,14 +102,14 @@ export default function BasicTable() {
                                 Consultation
                             </Typography>
                         </TableCell>
-                        {rows.map((row) => (
-                            <TableCell align="center">{row.consultation ? <CheckIcon /> : <CloseIcon />}</TableCell>
+                        {rows.map((row, i) => (
+                            <TableCell key={i} align="center">{row.consultation ? <CheckIcon /> : <CloseIcon />}</TableCell>
                         ))}
                     </TableRow>
                     <TableRow>
                         <TableCell component="th" scope="row" />
                         {rows.map((row, i) => (
-                            <TableCell align="center">
+                            <TableCell key={i} align="center">
                                 <Grid container
                                     justifyContent="center"
                                     alignItems="center">
